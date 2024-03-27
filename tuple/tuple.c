@@ -1,33 +1,37 @@
-#include <math.h>
-#include <CUnit/Basic.h>
+#include <stdio.h>
+#include <stdbool.h> // For boolean type
 #include "tuple.h"
 
-typedef struct {
-    double x, y, z, w;
+// Define the Tuple structure
+/// @brief 
+typedef struct tuple {
+    double x;
+    double y;
+    double z;
+    double w;
 } Tuple;
 
-typedef struct {
-    double red, green, blue;
-} Color;
-
+// Function to create a tuple
 Tuple tuple(double x, double y, double z, double w) {
     Tuple t = {x, y, z, w};
     return t;
 }
 
-Tuple point(double x, double y, double z) {
-    return tuple(x, y, z, 1.0);
-}
 
-Tuple vector(double x, double y, double z) {
-    return tuple(x, y, z, 0.0);
-}
+unsigned int is_vector(Tuple);
 
-Color color(double red, double green, double blue) {
-    Color c = {red, green, blue};
-    return c;
-}
+int main() {
+    // Test case
+    Tuple a = tuple(4.3, -4.2, 3.1, 1.0);
 
-double magnitudeOfVector(Tuple v) {
-    return sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
+    // Assertions
+    printf("Test results:\n");
+    printf("a.x = %.2f\n", a.x);
+    printf("a.y = %.2f\n", a.y);
+    printf("a.z = %.2f\n", a.z);
+    printf("a.w = %.2f\n", a.w);
+    printf("a is a point: %s\n", is_point(a) ? "true" : "false");
+    printf("a is not a vector: %s\n", is_vector(a) ? "false" : "true");
+
+    return 0;
 }

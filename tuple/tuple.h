@@ -1,8 +1,9 @@
 #ifndef TUPLE
 #define TUPLE
 
-typedef struct tuple_struct
-{
+
+/// @brief 
+typedef struct tuple_struct {
     double x;
     double y;
     double z;
