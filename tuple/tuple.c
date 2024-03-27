@@ -24,7 +24,7 @@ int main() {
     
     Tuple a = tuple(4.3, -4.2, 3.1, 1.0);
 
-    // Assertions
+    
     printf("Test results:\n");
     printf("a.x = %.2f\n", a.x);
     printf("a.y = %.2f\n", a.y);
