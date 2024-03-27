@@ -63,13 +63,7 @@ Tuple vector(double x, double y, double z) {
     return vec;
 }
 
-bool is_point(Tuple t) {
-    return t.w == 1;
-}
 
-bool is_vector(Tuple t) {
-    return t.w == 0;
-}
 
 
    
