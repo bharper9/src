@@ -45,7 +45,7 @@ int main() {
     printf("a is not a vector: %s\n", is_vector(a) ? "false" : "true");
 
     return 0;
-    
+}
 
 typedef struct {
     double x;
