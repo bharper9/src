@@ -105,5 +105,32 @@ int main() {
 
     return 0;
 
+Tuple point(double x, double y, double z) {
+    Tuple t;
+    t.x = x;
+    t.y = y;
+    t.z = z;
+    t.w = 1.0; // Setting w to 1 for a point
+    return t;
+}
+
+Tuple subTuples(Tuple a, Tuple b) {
+    Tuple result;
+    result.x = a.x - b.x;
+    result.y = a.y - b.y;
+    result.z = a.z - b.z;
+    result.w = 0.0; // Setting w to 0 for a vector
+    return result;
+    int main() {
+    // Test case
+    Tuple p1 = point(3, 2, 1);
+    Tuple p2 = point(5, 6, 7);
+
+    Tuple result = subTuples(p1, p2);
+
+    printf("Result: (%f, %f, %f, %f)\n", result.x, result.y, result.z, result.w);
+
+    return 0;
+    }
 }
 
