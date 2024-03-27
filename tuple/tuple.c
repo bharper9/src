@@ -72,19 +72,8 @@ bool is_vector(Tuple t) {
 }
 
 
-    // Test case
-    Tuple a = vector(4, -4, 3);
-
-    printf("Testing vector create:\n");
-    printf("a.x = %f\n", a.x);
-    printf("a.y = %f\n", a.y);
-    printf("a.z = %f\n", a.z);
-    printf("a.w = %f\n", a.w);
-
-    printf("Is a point? %s\n", is_point(a) ? "true" : "false");
-    printf("Is a vector? %s\n", is_vector(a) ? "true" : "false");
-
-    return 0;
+   
+    
 Tuple addTuples(Tuple a, Tuple b) {
     Tuple result;
     result.x = a.x + b.x;
