@@ -104,6 +104,7 @@ int main() {
     printf("Result: (%f, %f, %f, %f)\n", result.x, result.y, result.z, result.w);
 
     return 0;
+}
 
 Tuple point(double x, double y, double z) {
     Tuple t;
