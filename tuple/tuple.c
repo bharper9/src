@@ -21,7 +21,7 @@ unsigned int is_point(Tuple);
 unsigned int is_vector(Tuple);
 
 int main() {
-    // Test case
+    
     Tuple a = tuple(4.3, -4.2, 3.1, 1.0);
 
     // Assertions
