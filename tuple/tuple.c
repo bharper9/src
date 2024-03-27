@@ -121,6 +121,7 @@ Tuple subTuples(Tuple a, Tuple b) {
     result.z = a.z - b.z;
     result.w = 0.0; // Setting w to 0 for a vector
     return result;
+}
     int main() {
     // Test case
     Tuple p1 = point(3, 2, 1);
@@ -149,5 +150,24 @@ int main() {
     printf("Result: (%f, %f, %f, %f)\n", a.x, a.y, a.z, a.w);
 
     return 0;
+    Tuple scalarDivideTuple(Tuple t, double scalar) {
+    Tuple result;
+    result.x = t.x / scalar;
+    result.y = t.y / scalar;
+    result.z = t.z / scalar;
+    result.w = t.w / scalar;
+    return result;
 }
+}
+
+int main() {
+    // Test case
+    Tuple a = tuple(1, -2, 3, -4);
+    a = scalarDivideTuple(a, 2);
+
+    printf("Result: (%f, %f, %f, %f)\n", a.x, a.y, a.z, a.w);
+
+    return 0;
+}
+
 
