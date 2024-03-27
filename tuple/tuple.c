@@ -17,7 +17,7 @@ Tuple tuple(double x, double y, double z, double w) {
     return t;
 }
 
-
+unsigned int is_point(Tuple);
 unsigned int is_vector(Tuple);
 
 int main() {
