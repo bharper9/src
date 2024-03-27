@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include <stdbool.h> // For boolean type
+#include <stdbool.h> 
 #include "tuple.h"
 
-// Define the Tuple structure
-/// @brief 
+ 
 typedef struct tuple {
     double x;
     double y;
@@ -22,7 +21,7 @@ Tuple normalizeVector(Tuple);
 double dotProduct(Tuple, Tuple);
 
 
-// Function to create a tuple
+
 Tuple tuple(double x, double y, double z, double w) {
     Tuple t = {x, y, z, w};
     return t;
@@ -59,7 +58,7 @@ Tuple vector(double x, double y, double z) {
     vec.x = x;
     vec.y = y;
     vec.z = z;
-    vec.w = 0; // Since it's a vector, set w to 0
+    vec.w = 0; 
     return vec;
 }
 
@@ -78,7 +77,7 @@ Tuple addTuples(Tuple a, Tuple b) {
 }
 
 int main() {
-    // Test case
+    
     Tuple a1 = tuple(3, -2, 5, 1);
     Tuple a2 = tuple(-2, 3, 1, 0);
 
@@ -107,7 +106,7 @@ Tuple subTuples(Tuple a, Tuple b) {
     return result;
 }
     int main() {
-    // Test case
+   
     Tuple p1 = point(3, 2, 1);
     Tuple p2 = point(5, 6, 7);
 
@@ -127,13 +126,10 @@ Tuple subTuples(Tuple a, Tuple b) {
 }
 
 int main() {
-    // Test case
-    Tuple a = tuple(1, -2, 3, -4);
+    
     a = scalarMultTuple(3.5, a);
 
-    printf("Result: (%f, %f, %f, %f)\n", a.x, a.y, a.z, a.w);
-
-    return 0;
+    
     Tuple scalarDivideTuple(Tuple t, double scalar) {
     Tuple result;
     result.x = t.x / scalar;
@@ -144,14 +140,6 @@ int main() {
 }
 }
 
-int main() {
-    // Test case
-    Tuple a = tuple(1, -2, 3, -4);
-    a = scalarDivideTuple(a, 2);
 
-    printf("Result: (%f, %f, %f, %f)\n", a.x, a.y, a.z, a.w);
-
-    return 0;
-}
 
 
