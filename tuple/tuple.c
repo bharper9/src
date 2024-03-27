@@ -132,5 +132,22 @@ Tuple subTuples(Tuple a, Tuple b) {
 
     return 0;
     }
+    Tuple scalarMultTuple(double scalar, Tuple t) {
+    Tuple result;
+    result.x = scalar * t.x;
+    result.y = scalar * t.y;
+    result.z = scalar * t.z;
+    result.w = scalar * t.w;
+    return result;
+}
+
+int main() {
+    // Test case
+    Tuple a = tuple(1, -2, 3, -4);
+    a = scalarMultTuple(3.5, a);
+
+    printf("Result: (%f, %f, %f, %f)\n", a.x, a.y, a.z, a.w);
+
+    return 0;
 }
 
