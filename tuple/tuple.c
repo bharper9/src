@@ -45,8 +45,7 @@ int main() {
     printf("a is not a vector: %s\n", is_vector(a) ? "false" : "true");
 
     return 0;
-    #include <stdio.h>
-#include <stdbool.h>
+    
 
 typedef struct {
     double x;
@@ -72,7 +71,7 @@ bool is_vector(Tuple t) {
     return t.w == 0;
 }
 
-int main() {
+
     // Test case
     Tuple a = vector(4, -4, 3);
 
@@ -86,5 +85,25 @@ int main() {
     printf("Is a vector? %s\n", is_vector(a) ? "true" : "false");
 
     return 0;
+Tuple addTuples(Tuple a, Tuple b) {
+    Tuple result;
+    result.x = a.x + b.x;
+    result.y = a.y + b.y;
+    result.z = a.z + b.z;
+    result.w = a.w + b.w;
+    return result;
+}
+
+int main() {
+    // Test case
+    Tuple a1 = tuple(3, -2, 5, 1);
+    Tuple a2 = tuple(-2, 3, 1, 0);
+
+    Tuple result = addTuples(a1, a2);
+
+    printf("Result: (%f, %f, %f, %f)\n", result.x, result.y, result.z, result.w);
+
+    return 0;
+
 }
 
