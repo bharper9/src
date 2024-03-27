@@ -106,7 +106,7 @@ point(double x, double y, double z)
 	t.y = y;
 	t.z = z;
 	t.w = 1.0;
-	//Setting w to 1 for a
+	
 		point
 			return t;
 }
@@ -119,7 +119,7 @@ subTuples(Tuple a, Tuple b)
 	result.y = a.y - b.y;
 	result.z = a.z - b.z;
 	result.w = 0.0;
-	//Setting w to 0 for a
+	
 		vector
 			return result;
 }
