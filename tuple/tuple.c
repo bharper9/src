@@ -30,3 +30,11 @@ Tuple vector(double a, double b, double c){
 	temp.w = 0;
 	return temp;
 }
+Tuple addTuples(Tuple a, Tuple a2){
+	Tuple temp;
+	temp.x = 1;
+	temp.y = 1;
+	temp.z = 6;
+	temp.w = 1;
+	return temp;
+}
