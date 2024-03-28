@@ -22,3 +22,11 @@ Tuple point(double a, double b, double c){
 	temp.w = 1;
 	return temp;
 }
+Tuple vector(double a, double b, double c){
+	Tuple temp;
+	temp.x = a;
+	temp.y = b;
+	temp.z = c;
+	temp.w = 0;
+	return temp;
+}

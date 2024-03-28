@@ -22,7 +22,7 @@ unsigned int is_vector(Tuple);
 
 Tuple tuple(double, double, double, double);
 Tuple point(double, double, double);
-//Tuple vector(double, double, double);
+Tuple vector(double, double, double);
 //Tuple addTuples(Tuple, Tuple);
 //Tuple subTuples(Tuple, Tuple);
 //Tuple negateTuple(Tuple);

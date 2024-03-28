@@ -92,7 +92,7 @@ void testPointCreate(void) {
     CU_ASSERT_TRUE( is_point(a) );
     CU_ASSERT_FALSE( is_vector(a) );
 }
-#if 0
+
 /*
 	​Scenario​: vector() creates tuples with w=0
 ​ 	  ​Given​ v ← vector(4, -4, 3)
@@ -109,7 +109,7 @@ void testVectorCreate(void) {
     CU_ASSERT_FALSE( is_point(a) );
     CU_ASSERT_TRUE( is_vector(a) );
 }
-
+#if 0
 /*
 	​Scenario​: Adding two tuples
 ​ 	  ​Given​ a1 ← tuple(3, -2, 5, 1)
@@ -524,7 +524,7 @@ int main()
     if (  NULL == CU_add_test(pSuite, "test of testTuplePoint", testTuplePoint)
           || NULL == CU_add_test(pSuite, "test of testTupleVector", testTupleVector)
             || NULL == CU_add_test(pSuite, "test of testPointCreate", testPointCreate)
-          //  || NULL == CU_add_test(pSuite, "test of testVectorCreate", testVectorCreate)
+            || NULL == CU_add_test(pSuite, "test of testVectorCreate", testVectorCreate)
          //   || NULL == CU_add_test(pSuite, "test of testAddTuples", testAddTuples)
          //   || NULL == CU_add_test(pSuite, "test of testSubtractPoints", testSubtractPoints)
           //  || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromPoint", testSubtractVectorFromPoint)
