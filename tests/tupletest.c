@@ -127,7 +127,7 @@ void testAddTuples(void) {
     CU_ASSERT( result.z == 6 );
     CU_ASSERT( result.w == 1 );
 }
-#if 0
+
 /*
 	​Scenario​: Subtracting two points
 ​ 	  ​Given​ p1 ← point(3, 2, 1)
@@ -148,7 +148,7 @@ void testSubtractPoints(void) {
     CU_ASSERT_FALSE( is_point(result) );
     CU_ASSERT_TRUE( is_vector(result) );
 }
-
+#if 0
 /*
 Scenario​: Subtracting a vector from a point
 ​ 	  ​Given​ p ← point(3, 2, 1)
@@ -526,7 +526,7 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testPointCreate", testPointCreate)
             || NULL == CU_add_test(pSuite, "test of testVectorCreate", testVectorCreate)
            || NULL == CU_add_test(pSuite, "test of testAddTuples", testAddTuples)
-         //   || NULL == CU_add_test(pSuite, "test of testSubtractPoints", testSubtractPoints)
+            || NULL == CU_add_test(pSuite, "test of testSubtractPoints", testSubtractPoints)
           //  || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromPoint", testSubtractVectorFromPoint)
           //  || NULL == CU_add_test(pSuite, "test of testSubtractTwoVectors", testSubtractTwoVectors)
          //   || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromZeroVector", testSubtractVectorFromZeroVector)

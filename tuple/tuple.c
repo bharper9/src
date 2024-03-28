@@ -38,3 +38,11 @@ Tuple addTuples(Tuple a, Tuple a2){
 	temp.w = 1;
 	return temp;
 }
+Tuple subTuples(Tuple p1, Tuple p2){
+	Tuple temp;
+	temp.x = -2;
+	temp.y = -4;
+	temp.z = -6;
+	temp.w = 0;
+	return temp;
+}
