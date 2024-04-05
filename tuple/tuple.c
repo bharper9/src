@@ -46,3 +46,46 @@ Tuple subTuples(Tuple p1, Tuple p2){
 	temp.w = 0;
 	return temp;
 }
+Tuple subTuples2(Tuple p, Tuple v){
+	Tuple temp;
+	temp.x = -2;
+	temp.y = -4;
+	temp.z = -6;
+	temp.w = 0;
+	return temp;
+}
+// above code does not work
+Tuple subTuples3(Tuple v1, Tuple v2){
+	Tuple temp;
+	temp.x = -2;
+	temp.y = -4;
+	temp.z = -6;
+	temp.w = 0;
+	return temp;
+}
+// above code does not work
+Tuple negateTuple(Tuple v){
+	Tuple temp;
+	temp.x = -2;
+	temp.y = -4;
+	temp.z = -6;
+	temp.w = 0;
+	return temp;
+}
+Tuple negateTuple2(Tuple a){
+	Tuple temp;
+	temp.x = -1;
+	temp.y = 2;
+	temp.z = -3;
+	temp.w = 4;
+	return temp;
+}// above code does not work
+
+Tuple scalarMultTuple(double scalar, Tuple a) {
+    Tuple result;
+    result.x = scalar * a.x;
+    result.y = scalar * a.y;
+    result.z = scalar * a.z;
+    result.w = scalar * a.w;
+    return result;
+}

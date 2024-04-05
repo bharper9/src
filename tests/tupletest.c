@@ -148,7 +148,7 @@ void testSubtractPoints(void) {
     CU_ASSERT_FALSE( is_point(result) );
     CU_ASSERT_TRUE( is_vector(result) );
 }
-#if 0
+
 /*
 Scenario​: Subtracting a vector from a point
 ​ 	  ​Given​ p ← point(3, 2, 1)
@@ -257,7 +257,7 @@ void testMultiplyTupleByFraction(void) {
     CU_ASSERT( a.z == 1.5 );
     CU_ASSERT( a.w ==  -2 );
 }
-
+#if 0
 /*
 	​Scenario​: Dividing a tuple by a scalar
 ​ 	  ​Given​ a ← tuple(1, -2, 3, -4)
@@ -527,12 +527,12 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testVectorCreate", testVectorCreate)
            || NULL == CU_add_test(pSuite, "test of testAddTuples", testAddTuples)
             || NULL == CU_add_test(pSuite, "test of testSubtractPoints", testSubtractPoints)
-          //  || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromPoint", testSubtractVectorFromPoint)
-          //  || NULL == CU_add_test(pSuite, "test of testSubtractTwoVectors", testSubtractTwoVectors)
-         //   || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromZeroVector", testSubtractVectorFromZeroVector)
-         //   || NULL == CU_add_test(pSuite, "test of testNegateTuple", testNegateTuple)
-        //    || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByScalar", testMultiplyTupleByScalar)
-        //    || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByFraction", testMultiplyTupleByFraction)
+            || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromPoint", testSubtractVectorFromPoint)
+            || NULL == CU_add_test(pSuite, "test of testSubtractTwoVectors", testSubtractTwoVectors)
+            || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromZeroVector", testSubtractVectorFromZeroVector)
+            || NULL == CU_add_test(pSuite, "test of testNegateTuple", testNegateTuple)
+           || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByScalar", testMultiplyTupleByScalar)
+            || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByFraction", testMultiplyTupleByFraction)
          //   || NULL == CU_add_test(pSuite, "test of testDivideTupleByScalar", testDivideTupleByScalar)
         //    || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector1", testMagnitudeOfVector1)
         //    || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector2", testMagnitudeOfVector2)
