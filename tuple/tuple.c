@@ -47,7 +47,7 @@ Tuple subTuples2(Tuple p, Tuple v){
 	temp.w = 0;
 	return temp;
 }
-// above code does not work
+
 Tuple subTuples(Tuple a, Tuple b) {
     Tuple result;
     result.x = a.x - b.x;
@@ -56,23 +56,17 @@ Tuple subTuples(Tuple a, Tuple b) {
     result.w = a.w - b.w;
     return result;
 }
-// above code does not work
-Tuple negateTuple(Tuple v){
-	Tuple temp;
-	temp.x = -2;
-	temp.y = -4;
-	temp.z = -6;
-	temp.w = 0;
-	return temp;
+
+
+Tuple negateTuple(Tuple a) {
+    Tuple result;
+    result.x = -a.x;
+    result.y = -a.y;
+    result.z = -a.z;
+    result.w = -a.w;
+    return result;
 }
-Tuple negateTuple2(Tuple a){
-	Tuple temp;
-	temp.x = -1;
-	temp.y = 2;
-	temp.z = -3;
-	temp.w = 4;
-	return temp;
-}// above code does not work
+
 
 Tuple scalarMultTuple(double scalar, Tuple a) {
     Tuple result;
