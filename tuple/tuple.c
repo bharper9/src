@@ -38,14 +38,7 @@ Tuple addTuples(Tuple a, Tuple a2){
 	temp.w = 1;
 	return temp;
 }
-Tuple subTuples(Tuple p1, Tuple p2){
-	Tuple temp;
-	temp.x = -2;
-	temp.y = -4;
-	temp.z = -6;
-	temp.w = 0;
-	return temp;
-}
+
 Tuple subTuples2(Tuple p, Tuple v){
 	Tuple temp;
 	temp.x = -2;
@@ -55,13 +48,13 @@ Tuple subTuples2(Tuple p, Tuple v){
 	return temp;
 }
 // above code does not work
-Tuple subTuples3(Tuple v1, Tuple v2){
-	Tuple temp;
-	temp.x = -2;
-	temp.y = -4;
-	temp.z = -6;
-	temp.w = 0;
-	return temp;
+Tuple subTuples(Tuple a, Tuple b) {
+    Tuple result;
+    result.x = a.x - b.x;
+    result.y = a.y - b.y;
+    result.z = a.z - b.z;
+    result.w = a.w - b.w;
+    return result;
 }
 // above code does not work
 Tuple negateTuple(Tuple v){
