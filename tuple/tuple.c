@@ -76,3 +76,11 @@ Tuple scalarMultTuple(double scalar, Tuple a) {
     result.w = scalar * a.w;
     return result;
 }
+Tuple scalarDivideTuple(Tuple a, double scalar) {
+    Tuple result;
+    result.x = a.x / scalar;
+    result.y = a.y / scalar;
+    result.z = a.z / scalar;
+    result.w = a.w / scalar;
+    return result;
+}
