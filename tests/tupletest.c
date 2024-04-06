@@ -442,7 +442,7 @@ void testAddingColors(void) {
     CU_ASSERT_DOUBLE_EQUAL(result.green, expected.green, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(result.blue, expected.blue, EPSILON);
 }
-#if 0
+
 /*​
 ​ 	​Scenario​: Subtracting colors
 ​ 	  ​Given​ c1 ← color(0.9, 0.6, 0.75)
@@ -461,6 +461,7 @@ void testSubtractingColors(void) {
     CU_ASSERT_DOUBLE_EQUAL(result.green, expected.green, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(result.blue, expected.blue, EPSILON);
 }
+#if 0
 /*
 ​
 ​ 	​Scenario​: Multiplying a color by a scalar
@@ -547,7 +548,7 @@ int main()
             /* color tests*/
             || NULL == CU_add_test(pSuite, "test of testColors", testColors)
             || NULL == CU_add_test(pSuite, "test of testAddingColors", testAddingColors)
-        //    || NULL == CU_add_test(pSuite, "test of testSubtractingColors", testSubtractingColors)
+            || NULL == CU_add_test(pSuite, "test of testSubtractingColors", testSubtractingColors)
         //    || NULL == CU_add_test(pSuite, "test of testMultColors1", testMultColors1)
         //    || NULL == CU_add_test(pSuite, "test of testMultColors2", testMultColors2)
        )
