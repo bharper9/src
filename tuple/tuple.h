@@ -38,7 +38,7 @@ Tuple crossProduct(Tuple, Tuple);
 
 /* Color ops, using specialized three-component color struct */
 Color color(double, double, double);
-//Color addColors(Color, Color);
+Color addColors(Color, Color);
 //Color subColors(Color, Color);
 //Color scalarMultColor(double, Color);
 //Color multColors(Color, Color);
