@@ -131,4 +131,18 @@ Color subColors(Color c1, Color c2) {
     result.blue = c1.blue - c2.blue;
     return result;
 }
+Color scalarMultColor(double scalar, Color c) {
+    Color result;
+    result.red = scalar * c.red;
+    result.green = scalar * c.green;
+    result.blue = scalar * c.blue;
+    return result;
+}
+Color multColors(Color c1, Color c2) {
+    Color result;
+    result.red = c1.red * c2.red;
+    result.green = c1.green * c2.green;
+    result.blue = c1.blue * c2.blue;
+    return result;
+}
 

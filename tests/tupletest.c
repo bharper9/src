@@ -461,7 +461,7 @@ void testSubtractingColors(void) {
     CU_ASSERT_DOUBLE_EQUAL(result.green, expected.green, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(result.blue, expected.blue, EPSILON);
 }
-#if 0
+
 /*
 ​
 ​ 	​Scenario​: Multiplying a color by a scalar
@@ -498,7 +498,7 @@ void testMultColors2(void) {
     CU_ASSERT_DOUBLE_EQUAL(result.green, expected.green, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(result.blue, expected.blue, EPSILON);
 }
-
+#if 0
 /* The main() function for setting up and running the tests.
  * Returns a CUE_SUCCESS on successful running, another
  * CUnit error code on failure.
@@ -549,8 +549,8 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testColors", testColors)
             || NULL == CU_add_test(pSuite, "test of testAddingColors", testAddingColors)
             || NULL == CU_add_test(pSuite, "test of testSubtractingColors", testSubtractingColors)
-        //    || NULL == CU_add_test(pSuite, "test of testMultColors1", testMultColors1)
-        //    || NULL == CU_add_test(pSuite, "test of testMultColors2", testMultColors2)
+           || NULL == CU_add_test(pSuite, "test of testMultColors1", testMultColors1)
+            || NULL == CU_add_test(pSuite, "test of testMultColors2", testMultColors2)
        )
     {
         CU_cleanup_registry();
