@@ -88,3 +88,11 @@ Tuple scalarDivideTuple(Tuple a, double scalar) {
 double magnitudeOfVector(Tuple v) {
     return sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
 }
+Tuple normalizeVector(Tuple v) {
+    double magnitude = sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
+    Tuple result;
+    result.x = v.x / magnitude;
+    result.y = v.y / magnitude;
+    result.z = v.z / magnitude;
+    return result;
+}
