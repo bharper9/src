@@ -30,7 +30,7 @@ Tuple scalarMultTuple(double, Tuple);
 Tuple scalarDivideTuple(Tuple, double);
 double magnitudeOfVector(Tuple);
 Tuple normalizeVector(Tuple);
-//double dotProduct(Tuple, Tuple);
+double dotProduct(Tuple, Tuple);
 
 #if 0 // not needed for limited raycaster project CSC 251
 Tuple crossProduct(Tuple, Tuple);

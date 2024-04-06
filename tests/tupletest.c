@@ -368,7 +368,7 @@ void testMagnitudeOfNormalizedVector(void) {
     v = normalizeVector( v );
     CU_ASSERT_DOUBLE_EQUAL(magnitudeOfVector(v), 1, EPSILON);
 }
-#if 0
+
 /*
 	​Scenario​: The dot product of two tuples
 ​ 	  ​Given​ a ← vector(1, 2, 3)
@@ -380,7 +380,7 @@ void testDotProduct(void) {
     Tuple b = vector(2, 3, 4);
     CU_ASSERT_DOUBLE_EQUAL(dotProduct(a, b), 20, EPSILON);
 }
-
+#if 0
 
 #if 0  // NOT NEEDED FOR CSC 251 raycaster project
 /*
@@ -541,8 +541,8 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector5", testMagnitudeOfVector5)
            || NULL == CU_add_test(pSuite, "test of testNormalizeVector1", testNormalizeVector1)
            || NULL == CU_add_test(pSuite, "test of testNormalizeVector2", testNormalizeVector2)
-         //   || NULL == CU_add_test(pSuite, "test of testMagnitudeOfNormalizedVector", testMagnitudeOfNormalizedVector)
-         //   || NULL == CU_add_test(pSuite, "test of testDotProduct", testDotProduct)
+            || NULL == CU_add_test(pSuite, "test of testMagnitudeOfNormalizedVector", testMagnitudeOfNormalizedVector)
+            || NULL == CU_add_test(pSuite, "test of testDotProduct", testDotProduct)
 //            || NULL == CU_add_test(pSuite, "test of testCrossProduct", testCrossProduct)
 
             /* color tests*/

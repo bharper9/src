@@ -96,3 +96,7 @@ Tuple normalizeVector(Tuple v) {
     result.z = v.z / magnitude;
     return result;
 }
+
+double dotProduct(Tuple a, Tuple b) {
+    return a.x * b.x + a.y * b.y + a.z * b.z;
+}
