@@ -272,7 +272,7 @@ void testDivideTupleByScalar(void) {
     CU_ASSERT( a.z == 1.5 );
     CU_ASSERT( a.w ==  -2 );
 }
-#if 0
+
 /*
 	​Scenario​: Computing the magnitude of vector(1, 0, 0)
 ​ 	  ​Given​ v ← vector(1, 0, 0)
@@ -282,7 +282,7 @@ void testMagnitudeOfVector1(void) {
     Tuple v = vector(1, 0, 0);
     CU_ASSERT_DOUBLE_EQUAL(magnitudeOfVector(v), 1, EPSILON);
 }
-
+#if 0
 /*
 ​ 	​Scenario​: Computing the magnitude of vector(0, 1, 0)
 ​ 	  ​Given​ v ← vector(0, 1, 0)
@@ -534,7 +534,7 @@ int main()
            || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByScalar", testMultiplyTupleByScalar)
             || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByFraction", testMultiplyTupleByFraction)
             || NULL == CU_add_test(pSuite, "test of testDivideTupleByScalar", testDivideTupleByScalar)
-        //    || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector1", testMagnitudeOfVector1)
+           || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector1", testMagnitudeOfVector1)
         //    || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector2", testMagnitudeOfVector2)
          //   || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector3", testMagnitudeOfVector3)
          //   || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector4", testMagnitudeOfVector4)

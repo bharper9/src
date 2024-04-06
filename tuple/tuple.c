@@ -1,4 +1,5 @@
 #include "tuple.h"
+#include <math.h>
 unsigned int is_point(Tuple t){
 	return t.w==1;
 }
@@ -83,4 +84,7 @@ Tuple scalarDivideTuple(Tuple a, double scalar) {
     result.z = a.z / scalar;
     result.w = a.w / scalar;
     return result;
+}
+double magnitudeOfVector(Tuple v) {
+    return sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
 }
