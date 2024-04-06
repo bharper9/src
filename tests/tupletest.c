@@ -380,9 +380,9 @@ void testDotProduct(void) {
     Tuple b = vector(2, 3, 4);
     CU_ASSERT_DOUBLE_EQUAL(dotProduct(a, b), 20, EPSILON);
 }
-#if 0
 
-#if 0  // NOT NEEDED FOR CSC 251 raycaster project
+
+  // NOT NEEDED FOR CSC 251 raycaster project
 /*
 Scenario​: The cross product of two vectors
 ​ 	  ​Given​ a ← vector(1, 2, 3)
@@ -390,12 +390,13 @@ Scenario​: The cross product of two vectors
 ​ 	  ​Then​ cross(a, b) = vector(-1, 2, -1)
 ​ 	    ​And​ cross(b, a) = vector(1, -2, 1)
 */
+/*
 void testCrossProduct(void) {
     Tuple a = vector(1, 2, 3);
     Tuple b = vector(2, 3, 4);
 
-    Tuple cross_a_b = crossProduct( a, b );
-    Tuple cross_b_a = crossProduct( b, a );
+    Tuple cross_a_b = crossProduct(a,b);
+    Tuple cross_b_a = crossProduct(b,a);
 
     Tuple expected_a_b = vector(-1, 2, -1);
     Tuple expected_b_a = vector(1, -2, 1);
@@ -408,8 +409,6 @@ void testCrossProduct(void) {
     CU_ASSERT_DOUBLE_EQUAL(cross_b_a.y, expected_b_a.y, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(cross_b_a.z, expected_b_a.z, EPSILON);
 }
-#endif
-
 /*
 Scenario​: Colors are (red, green, blue) tuples
 ​ 	  ​Given​ c ← color(-0.5, 0.4, 1.7)
@@ -425,7 +424,7 @@ void testColors(void) {
     CU_ASSERT_DOUBLE_EQUAL(c.green, 0.4, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(c.blue, 1.7, EPSILON);
 }
-
+#if 0
 /*
 	​Scenario​: Adding colors
 ​ 	  ​Given​ c1 ← color(0.9, 0.6, 0.75)
@@ -543,10 +542,10 @@ int main()
            || NULL == CU_add_test(pSuite, "test of testNormalizeVector2", testNormalizeVector2)
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfNormalizedVector", testMagnitudeOfNormalizedVector)
             || NULL == CU_add_test(pSuite, "test of testDotProduct", testDotProduct)
-//            || NULL == CU_add_test(pSuite, "test of testCrossProduct", testCrossProduct)
+          // || NULL == CU_add_test(pSuite, "test of testCrossProduct", testCrossProduct)
 
             /* color tests*/
-        //    || NULL == CU_add_test(pSuite, "test of testColors", testColors)
+            || NULL == CU_add_test(pSuite, "test of testColors", testColors)
         //    || NULL == CU_add_test(pSuite, "test of testAddingColors", testAddingColors)
         //    || NULL == CU_add_test(pSuite, "test of testSubtractingColors", testSubtractingColors)
         //    || NULL == CU_add_test(pSuite, "test of testMultColors1", testMultColors1)

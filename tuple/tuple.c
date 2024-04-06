@@ -1,5 +1,6 @@
 #include "tuple.h"
 #include <math.h>
+
 unsigned int is_point(Tuple t){
 	return t.w==1;
 }
@@ -99,4 +100,20 @@ Tuple normalizeVector(Tuple v) {
 
 double dotProduct(Tuple a, Tuple b) {
     return a.x * b.x + a.y * b.y + a.z * b.z;
+}
+Tuple crossProduct(Tuple a, Tuple b) {
+    Tuple result;
+
+    result.x = a.y * b.z - a.z * b.y;
+    result.y = a.z * b.x - a.x * b.z;
+    result.z = a.x * b.y - a.y * b.x;
+
+    return result;
+}
+Color color(double red, double green, double blue) {
+    Color c;
+    c.red = red;
+    c.green = green;
+    c.blue = blue;
+    return c;
 }
