@@ -40,7 +40,7 @@ void testCreatingCanvas(void) {
 
     //free((void *) c.pixels); // prob not needed for app though
 }
-#if 0
+
 
 /*
 	​Scenario​: Writing pixels to a canvas
@@ -60,7 +60,7 @@ void testWritingPixelsToCanvas(void) {
     CU_ASSERT(out.green == 0);
     CU_ASSERT(out.blue == 0);
 
-    free((void *) c.pixels); // prob not needed for app though
+    //free((void *) c.pixels); // prob not needed for app though
 }
 
 /*
@@ -74,6 +74,7 @@ void testWritingPixelsToCanvas(void) {
 ​ 	​    255​
 ​ 	​    """
 */
+#if 0
 void testConstructingPPMHeader(void){
     Canvas c = canvas(5, 3);
     char* ppm = canvas_to_ppm(c);
@@ -86,8 +87,8 @@ void testConstructingPPMHeader(void){
     CU_ASSERT_STRING_EQUAL(line2, "5 3");
     CU_ASSERT_STRING_EQUAL(line3, "255");
 
-    free((void *) c.pixels); // prob not needed for app though
-    free(ppm);
+    //free((void *) c.pixels); // prob not needed for app though
+    //free(ppm);
 }
 
 /*
@@ -108,6 +109,7 @@ Scenario​: Constructing the PPM pixel data
 ​ 	​    """
 
 */
+
 void testConstructingPPMPixelData(void) {
     Canvas c = canvas(5, 3);
 
@@ -221,8 +223,8 @@ int main()
     /* add the tests to the suite */
     /* NOTE - ORDER IS IMPORTANT */
     if (  NULL == CU_add_test(pSuite, "test of testCreatingCanvas", testCreatingCanvas)
-       //|| NULL == CU_add_test(pSuite, "test of testWritingPixelsToCanvas", testWritingPixelsToCanvas)
-       //|| NULL == CU_add_test(pSuite, "test of testConstructingPPMHeader", testConstructingPPMHeader)
+       || NULL == CU_add_test(pSuite, "test of testWritingPixelsToCanvas", testWritingPixelsToCanvas)
+      // || NULL == CU_add_test(pSuite, "test of testConstructingPPMHeader", testConstructingPPMHeader)
        //|| NULL == CU_add_test(pSuite, "test of testConstructingPPMPixelData", testConstructingPPMPixelData)
        //|| NULL == CU_add_test(pSuite, "test of testSplittingLongLinesInPPM", testSplittingLongLinesInPPM)
        //|| NULL == CU_add_test(pSuite, "test of testPPMTerminatedByNewlineChar", testPPMTerminatedByNewlineChar)
