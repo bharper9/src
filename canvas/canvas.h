@@ -1,5 +1,7 @@
 #ifndef CANVAS
 #define CANVAS
+#include <stdlib.h>
+
 
 #include "../tuple/tuple.h"
 
