@@ -6,12 +6,8 @@
 #include <math.h>
 #include <stdio.h>
 
-
-
 static char    *
 unsigned_int_to_char_array(unsigned int);
-
-
 
 Canvas
 canvas(unsigned int w, unsigned int h)
@@ -24,7 +20,6 @@ canvas(unsigned int w, unsigned int h)
 	return ca;
 
 }
-
 
 Canvas
 write_pixel(Canvas ca, unsigned int x, unsigned int y, Color co)
