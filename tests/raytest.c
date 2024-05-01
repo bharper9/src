@@ -48,7 +48,7 @@ void testRayCreation(void)
     CU_ASSERT( r.direction.y == direction.y ); 
     CU_ASSERT( r.direction.z == direction.z );
 }
-#if 0
+
 /*
 Scenario​: Computing a point from a distance
 ​ 	  ​Given​ r ← ray(point(2, 3, 4), vector(1, 0, 0))
@@ -86,7 +86,7 @@ void testComputePointFromDistance(void)
     CU_ASSERT_DOUBLE_EQUAL( t_twofive.y, 3, EPSILON );
     CU_ASSERT_DOUBLE_EQUAL( t_twofive.z, 4, EPSILON );
 }
-
+#if 0
 /*
 	​Scenario​: A ray intersects a sphere at two points
 ​ 	  ​Given​ r ← ray(point(0, 0, -5), vector(0, 0, 1))
@@ -212,7 +212,7 @@ int main()
     /* add the tests to the suite */
     /* NOTE - ORDER IS IMPORTANT */
     if (  NULL == CU_add_test(pSuite, "test of Ray Creation", testRayCreation)
-       //|| NULL == CU_add_test(pSuite, "testComputePointFromDistance", testComputePointFromDistance)
+       || NULL == CU_add_test(pSuite, "testComputePointFromDistance", testComputePointFromDistance)
        //|| NULL == CU_add_test(pSuite, "testRayIntersectSphereTwoPoints", testRayIntersectSphereTwoPoints)
        //|| NULL == CU_add_test(pSuite, "testRayIntersectSphereTangent", testRayIntersectSphereTangent)
        //|| NULL == CU_add_test(pSuite, "testRayMissesSphere", testRayMissesSphere)
