@@ -38,36 +38,41 @@ Color pixel_at(Canvas ca, unsigned int x, unsigned int y) {
 }
 
 char *canvas_to_ppm(Canvas ca) {
-    const unsigned int HEADER_MAX_LEN = 100;
+    const unsigned int HEADER_MAX_LEN = 50;
     char header[HEADER_MAX_LEN];
     sprintf(header, "P3\n%d %d\n255\n", ca.width, ca.height);
     unsigned int hbytes = strlen(header);
     unsigned int num_pixels = ca.width * ca.height;
     unsigned int max_len = hbytes + num_pixels * 12 + num_pixels * 2 + 1;
-    char *ppm = (char *)malloc(max_len * sizeof(char));
+
+    char *ppm = (char *)malloc(max_len * sizeof(char)+50);
     if (ppm == NULL) {
         return NULL;
     }
     strcpy(ppm, header);
     char *ptr = ppm + hbytes;
     for (unsigned int i = 0; i < num_pixels; i++) {
-        int red = ca.pixels[i * 3];
-        int green = ca.pixels[i * 3 + 1];
-        int blue = ca.pixels[i * 3 + 2];
-        if (red < 0)
-            red = 0;
-        if (red > 255)
-            red = 255;
-        if (green < 0)
-            green = 0;
-        if (green > 255)
-            green = 255;
-        if (blue < 0)
-            blue = 0;
-        if (blue > 255)
-            blue = 255;
-        sprintf(ptr, "%d %d %d ", red, green, blue);
-        ptr += 11;
+
+        Color color;
+        color.red = ca.pixels[i * 3];
+        color.green = ca.pixels[i * 3 + 1];
+        color.blue = ca.pixels[i * 3 + 2];
+        if (color.red < 0)
+            color.red = 0;
+        if (color.red > 255)
+            color.red = 255;
+        if (color.green< 0)
+            color.green = 0;
+        if (color.green > 255)
+            color.green = 255;
+        if (color.blue < 0)
+            color.blue = 0;
+        if (color.blue > 255)
+            color.blue = 255;
+        sprintf(ptr, "%d %d %d ", (int)color.red, (int)color.green, (int)color.blue);
+        printf("%d %d %d", (int)color.red, (int)color.green, (int)color.blue); // / math new line after color rgb limit 
+        printf(ppm, "\n"); // might hace something close to infinte loop 
+        ptr += 1;
     }
     ppm[max_len - 2] = '\n';
     ppm[max_len - 1] = '\0';

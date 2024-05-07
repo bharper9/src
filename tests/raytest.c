@@ -86,7 +86,7 @@ void testComputePointFromDistance(void)
     CU_ASSERT_DOUBLE_EQUAL( t_twofive.y, 3, EPSILON );
     CU_ASSERT_DOUBLE_EQUAL( t_twofive.z, 4, EPSILON );
 }
-#if 0
+
 /*
 	​Scenario​: A ray intersects a sphere at two points
 ​ 	  ​Given​ r ← ray(point(0, 0, -5), vector(0, 0, 1))
@@ -188,7 +188,7 @@ void testSphereBehindRay(void)
     CU_ASSERT_DOUBLE_EQUAL( xs.t_vals[0], -6, EPSILON ); 
     CU_ASSERT_DOUBLE_EQUAL( xs.t_vals[1], -4, EPSILON );
 }
-
+#if 0
 #endif
 /* The main() function for setting up and running the tests.
  * Returns a CUE_SUCCESS on successful running, another
@@ -213,11 +213,11 @@ int main()
     /* NOTE - ORDER IS IMPORTANT */
     if (  NULL == CU_add_test(pSuite, "test of Ray Creation", testRayCreation)
        || NULL == CU_add_test(pSuite, "testComputePointFromDistance", testComputePointFromDistance)
-       //|| NULL == CU_add_test(pSuite, "testRayIntersectSphereTwoPoints", testRayIntersectSphereTwoPoints)
-       //|| NULL == CU_add_test(pSuite, "testRayIntersectSphereTangent", testRayIntersectSphereTangent)
-       //|| NULL == CU_add_test(pSuite, "testRayMissesSphere", testRayMissesSphere)
-      // || NULL == CU_add_test(pSuite, "testRayOriginatesInsideSphere", testRayOriginatesInsideSphere)
-      // || NULL == CU_add_test(pSuite, "testSphereBehindRay", testSphereBehindRay)
+       || NULL == CU_add_test(pSuite, "testRayIntersectSphereTwoPoints", testRayIntersectSphereTwoPoints)
+       || NULL == CU_add_test(pSuite, "testRayIntersectSphereTangent", testRayIntersectSphereTangent)
+       || NULL == CU_add_test(pSuite, "testRayMissesSphere", testRayMissesSphere)
+       || NULL == CU_add_test(pSuite, "testRayOriginatesInsideSphere", testRayOriginatesInsideSphere)
+       || NULL == CU_add_test(pSuite, "testSphereBehindRay", testSphereBehindRay)
        )
     {
         CU_cleanup_registry();
