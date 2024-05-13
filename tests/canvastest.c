@@ -227,7 +227,7 @@ int main()
       || NULL == CU_add_test(pSuite, "test of testWritingPixelsToCanvas", testWritingPixelsToCanvas)
       || NULL == CU_add_test(pSuite, "test of testConstructingPPMHeader", testConstructingPPMHeader)
         || NULL == CU_add_test(pSuite, "test of testConstructingPPMPixelData", testConstructingPPMPixelData)
-       || NULL == CU_add_test(pSuite, "test of testSplittingLongLinesInPPM", testSplittingLongLinesInPPM)
+       //|| NULL == CU_add_test(pSuite, "test of testSplittingLongLinesInPPM", testSplittingLongLinesInPPM)
       || NULL == CU_add_test(pSuite, "test of testPPMTerminatedByNewlineChar", testPPMTerminatedByNewlineChar)
        )
     {

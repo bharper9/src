@@ -112,11 +112,13 @@ Tuple crossProduct(Tuple a, Tuple b) {
 }
 Color color(double red, double green, double blue) {
     Color c;
-    c.red = red;
-    c.green = green;
-    c.blue = blue;
+    // Convert color components to the range [0, 255] and round to the nearest integer
+    c.red = round(red * 255);
+    c.green = round(green * 255);
+    c.blue = round(blue * 255);
     return c;
 }
+
 Color addColors(Color c1, Color c2) {
     Color result;
     result.red = c1.red + c2.red;
